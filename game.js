@@ -15,34 +15,37 @@ var winningScore = 100;
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
-  createItem(375, 400, 'coin');
-  createItem(575, 500, 'star');
-  createItem(225, 500, 'coin');
-  createItem(100, 250, 'coin');
-  createItem(575, 150, 'star');
-  createItem(525, 300, 'poison');
-  createItem(650, 250, 'coin');
-  createItem(225, 200, 'coin');
+  createItem(475, 320, 'coin');
+  createItem(700, 510, 'star');
+  createItem(225, 400, 'coin');
+  createItem(70, 240, 'coin');
+  createItem(575, 50, 'star');
+  
+  createItem(680, 225, 'coin');
+  createItem(255, 140, 'coin');
   createItem(375, 100, 'poison');
-  createItem(370,500,'poison');
+  
   createItem(100, 375, 'poison');
-  createItem(125, 50, 'star');
+  createItem(180, 50, 'star');
 }
 
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(450, 550, 'platform');
-  platforms.create(100, 550, 'platform');
-  platforms.create(300, 450, 'platform');
-  platforms.create(250, 150, 'platform');
-  platforms.create(50, 300, 'platform');
-  platforms.create(150, 250, 'platform');
-  platforms.create(650, 300, 'platform');
-  platforms.create(550, 200, 'platform2');
-  platforms.create(300, 450, 'platform2');
-  platforms.create(400, 350, 'platform2');
-  platforms.create(100, 100, 'platform2');
+  platforms.create(-50, 570, 'platform2');
+  platforms.create(100, 570, 'platform2');
+  platforms.create(250, 570, 'platform2');
+  platforms.create(400, 570, 'platform2');
+  platforms.create(550, 570, 'platform2');
+  platforms.create(700, 570, 'platform2');  
+  platforms.create(100, 100, 'platform');
+  platforms.create(500, 100, 'platform');  
+  platforms.create(100, 470, 'platform');
+  platforms.create(580, 470, 'platform');
+  platforms.create(350, 380, 'platform');
+  platforms.create(0, 300, 'platform');
+  platforms.create(620, 290, 'platform');  
+  platforms.create(250, 200, 'platform');
   platforms.setAll('body.immovable', true);
 }
 
@@ -104,12 +107,12 @@ window.onload = function () {
 
   // initial game set up
   function create() {
-    player = game.add.sprite(50, 600, 'player');
+    player = game.add.sprite(50, 500, 'player');
     player.animations.add('walk');
     player.anchor.setTo(0.5, 1);
     game.physics.arcade.enable(player);
     player.body.collideWorldBounds = true;
-    player.body.gravity.y = 500;
+    player.body.gravity.y = 750;
 
     addItems();
     addPlatforms();
