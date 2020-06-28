@@ -15,37 +15,41 @@ var winningScore = 100;
 // add collectable items to the game
 function addItems() {
   items = game.add.physicsGroup();
-  createItem(475, 320, 'coin');
-  createItem(700, 510, 'star');
-  createItem(225, 400, 'coin');
-  createItem(70, 240, 'coin');
-  createItem(575, 50, 'star');
+  createItem(475, 350, 'coin');
+  createItem(700, 540, 'star');
+  createItem(225, 430, 'coin');
+  createItem(70, 270, 'coin');
+  createItem(575, 80, 'star');
   
-  createItem(680, 225, 'coin');
-  createItem(255, 140, 'coin');
-  createItem(375, 100, 'poison');
+  createItem(680, 255, 'coin');
+  createItem(255, 170, 'coin');
+  createItem(375, 120, 'poison');
   
-  createItem(100, 375, 'poison');
-  createItem(180, 50, 'star');
+  createItem(90, 415, 'poison');
+  createItem(180, 80, 'star');
 }
 
 // add platforms to the game
 function addPlatforms() {
   platforms = game.add.physicsGroup();
-  platforms.create(-50, 570, 'platform2');
-  platforms.create(100, 570, 'platform2');
-  platforms.create(250, 570, 'platform2');
-  platforms.create(400, 570, 'platform2');
-  platforms.create(550, 570, 'platform2');
-  platforms.create(700, 570, 'platform2');  
-  platforms.create(100, 100, 'platform');
-  platforms.create(500, 100, 'platform');  
-  platforms.create(100, 470, 'platform');
-  platforms.create(580, 470, 'platform');
-  platforms.create(340, 380, 'platform');
-  platforms.create(0, 300, 'platform');
-  platforms.create(620, 290, 'platform');  
-  platforms.create(250, 200, 'platform');
+  platforms.create(-50, 600, 'platform2');
+  platforms.create(100, 600, 'platform2');
+  platforms.create(250, 600, 'platform2');
+  platforms.create(400, 600, 'platform2');
+  platforms.create(550, 600, 'platform2');
+  platforms.create(700, 600, 'platform2');
+  platforms.create(850, 600, 'platform2');
+  platforms.create(1000, 600, 'platform2');
+  platforms.create(1150, 600, 'platform2');
+    
+  platforms.create(100, 130, 'platform');
+  platforms.create(500, 130, 'platform');  
+  platforms.create(100, 500, 'platform');
+  platforms.create(580, 500, 'platform');
+  platforms.create(340, 410, 'platform');
+  platforms.create(0, 330, 'platform');
+  platforms.create(620, 320, 'platform');  
+  platforms.create(250, 230, 'platform');
   platforms.setAll('body.immovable', true);
 }
 
@@ -87,7 +91,7 @@ function badgeHandler(player, badge) {
 
 // setup game when the web page loads
 window.onload = function () {
-  game = new Phaser.Game(800, 600, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
+  game = new Phaser.Game(1800, 630, Phaser.AUTO, '', { preload: preload, create: create, update: update, render: render });
   
   // before the game begins
   function preload() {
